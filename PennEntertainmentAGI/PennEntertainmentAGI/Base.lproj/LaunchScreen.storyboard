@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dsv-uN-4kZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="YDN-gn-I6E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hr-RW-NU7">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zjn-1d-SVF">
+                                        <rect key="frame" x="71.666666666666686" y="299.66666666666669" width="250" height="253.33333333333331"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="aMq-gq-D2X"/>
+                                            <constraint firstAttribute="width" constant="250" id="lqc-OJ-YH6"/>
+                                        </constraints>
+                                        <imageReference key="image" image="tree" catalog="system" renderingMode="original"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Quality Index" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4J-D8-hGn">
+                                        <rect key="frame" x="75.333333333333329" y="566" width="242.33333333333337" height="34"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstItem="T4J-D8-hGn" firstAttribute="centerX" secondItem="7Hr-RW-NU7" secondAttribute="centerX" id="Cv0-vd-C1l"/>
+                                    <constraint firstItem="zjn-1d-SVF" firstAttribute="centerX" secondItem="7Hr-RW-NU7" secondAttribute="centerX" id="DGc-C9-XGZ"/>
+                                    <constraint firstItem="zjn-1d-SVF" firstAttribute="centerY" secondItem="7Hr-RW-NU7" secondAttribute="centerY" id="GDK-Df-c99"/>
+                                    <constraint firstItem="T4J-D8-hGn" firstAttribute="top" secondItem="zjn-1d-SVF" secondAttribute="bottom" constant="15" id="MOZ-eG-TsA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7Hr-RW-NU7" secondAttribute="bottom" id="7jh-xT-LWA"/>
+                            <constraint firstItem="7Hr-RW-NU7" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="SCo-dK-n4D"/>
+                            <constraint firstAttribute="trailing" secondItem="7Hr-RW-NU7" secondAttribute="trailing" id="dSY-bj-euN"/>
+                            <constraint firstItem="7Hr-RW-NU7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="nVE-66-ogC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tree" catalog="system" width="128" height="118"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
