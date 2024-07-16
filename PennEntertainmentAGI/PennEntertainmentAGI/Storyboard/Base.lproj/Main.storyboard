@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PennEntertainmentAGI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3j-ae-liM">
+                                <rect key="frame" x="16" y="129" width="361" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swX-ce-xHT">
+                                <rect key="frame" x="16" y="319.33333333333331" width="24" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="2Lb-cX-GsS"/>
+                                </constraints>
+                                <color key="tintColor" name="BackgroundDailyAQI"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled"/>
+                                <connections>
+                                    <action selector="updateLatLong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Q3-7C-Ohv"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ayq-mq-0dK">
+                                <rect key="frame" x="16" y="432.33333333333326" width="361" height="175"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="EQ6-BN-o4J"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bb0-oU-yjN">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PastPresentCollectionViewCell" id="EZN-wW-UZZ">
+                                        <rect key="frame" x="0.0" y="23.666666666666668" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Eqg-IX-Qix">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="70e-8G-gd3">
+                                <rect key="frame" x="16" y="381.33333333333331" width="361" height="32"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <segments>
+                                    <segment title="o3"/>
+                                    <segment title="pm10"/>
+                                    <segment title="pm25"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="zer-fF-uPZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAC-Di-mrZ">
+                                <rect key="frame" x="16" y="109" width="361" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00j-C7-Fdm">
+                                <rect key="frame" x="16" y="149" width="103" height="22.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxA-Ab-S4V">
+                                <rect key="frame" x="124" y="143.33333333333334" width="253" height="34"/>
+                                <color key="backgroundColor" name="BackgroundDailyAQI"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fDl-jO-1zf">
+                                <rect key="frame" x="135.66666666666663" y="191.33333333333334" width="241.33333333333337" height="34"/>
+                                <color key="backgroundColor" name="BackgroundDailyAQI"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3F-T8-qhC">
+                                <rect key="frame" x="16.000000000000007" y="197.33333333333334" width="114.66666666666669" height="22.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current AQI:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0G-AY-NGY">
+                                <rect key="frame" x="16" y="245.33333333333337" width="361" height="23"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green - Good, Yellow - Moderate, Orange - Unhealthy for Senesitive Groups, Red - Unsafe" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA6-sj-WRq">
+                                <rect key="frame" x="16" y="271.33333333333331" width="361" height="28"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxl-X9-Ha7">
+                                <rect key="frame" x="50" y="319.33333333333331" width="44" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="QeI-cc-hkQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="aER-Wv-yd4"/>
+                                </constraints>
+                                <color key="tintColor" name="BackgroundDailyAQI"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled"/>
+                                <connections>
+                                    <action selector="resetLatLong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vY7-eb-HBh"/>
+                                    <action selector="updateLatLong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYk-7F-Xdv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AAC-Di-mrZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Iv-Fx-93A"/>
+                            <constraint firstItem="fxA-Ab-S4V" firstAttribute="centerY" secondItem="00j-C7-Fdm" secondAttribute="centerY" id="342-8P-QyO"/>
+                            <constraint firstItem="fDl-jO-1zf" firstAttribute="leading" secondItem="f3F-T8-qhC" secondAttribute="trailing" constant="5" id="4ES-1Q-qH7"/>
+                            <constraint firstItem="swX-ce-xHT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4Ez-gR-V57"/>
+                            <constraint firstItem="B0G-AY-NGY" firstAttribute="top" secondItem="fDl-jO-1zf" secondAttribute="bottom" constant="20" id="6Gx-NY-Sjd"/>
+                            <constraint firstItem="e3j-ae-liM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6IP-Sf-kfY"/>
+                            <constraint firstItem="Ayq-mq-0dK" firstAttribute="top" secondItem="70e-8G-gd3" secondAttribute="bottom" constant="20" id="8pE-xh-rkY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gxl-X9-Ha7" secondAttribute="trailing" symbolic="YES" id="AYv-26-y1K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="swX-ce-xHT" secondAttribute="trailing" symbolic="YES" id="At9-If-mn7"/>
+                            <constraint firstAttribute="trailing" secondItem="zA6-sj-WRq" secondAttribute="trailing" constant="16" id="HE3-PT-LEZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e3j-ae-liM" secondAttribute="trailing" constant="16" id="IfH-N8-GDv"/>
+                            <constraint firstItem="gxl-X9-Ha7" firstAttribute="centerY" secondItem="swX-ce-xHT" secondAttribute="centerY" id="JYc-pc-lF8"/>
+                            <constraint firstItem="AAC-Di-mrZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="LbJ-Uf-a2I"/>
+                            <constraint firstItem="f3F-T8-qhC" firstAttribute="top" secondItem="fxA-Ab-S4V" secondAttribute="bottom" constant="20" id="Lhl-Uu-R8r"/>
+                            <constraint firstItem="zA6-sj-WRq" firstAttribute="top" secondItem="B0G-AY-NGY" secondAttribute="bottom" constant="3" id="MoC-jF-fQQ"/>
+                            <constraint firstItem="swX-ce-xHT" firstAttribute="top" secondItem="zA6-sj-WRq" secondAttribute="bottom" constant="20" id="Pkw-3W-ixb"/>
+                            <constraint firstItem="gxl-X9-Ha7" firstAttribute="leading" secondItem="swX-ce-xHT" secondAttribute="trailing" constant="10" id="RJP-Bm-PMu"/>
+                            <constraint firstItem="00j-C7-Fdm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YpU-pG-OuE"/>
+                            <constraint firstItem="e3j-ae-liM" firstAttribute="top" secondItem="AAC-Di-mrZ" secondAttribute="bottom" constant="20" id="ZG7-bw-L1a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fDl-jO-1zf" secondAttribute="trailing" constant="16" id="ZH4-wR-Bq3"/>
+                            <constraint firstItem="Ayq-mq-0dK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aWt-3t-Snk"/>
+                            <constraint firstItem="f3F-T8-qhC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aqR-Nv-JFN"/>
+                            <constraint firstItem="B0G-AY-NGY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bPN-Im-cZl"/>
+                            <constraint firstItem="00j-C7-Fdm" firstAttribute="top" secondItem="e3j-ae-liM" secondAttribute="bottom" constant="20" id="dz8-p3-qmN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B0G-AY-NGY" secondAttribute="trailing" constant="16" id="fAB-xO-eHo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ayq-mq-0dK" secondAttribute="trailing" constant="16" id="gP9-E5-Ll0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="70e-8G-gd3" secondAttribute="trailing" constant="16" id="iem-3V-x5f"/>
+                            <constraint firstItem="70e-8G-gd3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="k4A-Yi-zMz"/>
+                            <constraint firstItem="70e-8G-gd3" firstAttribute="top" secondItem="swX-ce-xHT" secondAttribute="bottom" constant="20" id="lCS-T5-LyR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AAC-Di-mrZ" secondAttribute="trailing" constant="16" id="pZE-h7-pwT"/>
+                            <constraint firstItem="fxA-Ab-S4V" firstAttribute="leading" secondItem="00j-C7-Fdm" secondAttribute="trailing" constant="5" id="r1v-sL-Dwy"/>
+                            <constraint firstItem="fDl-jO-1zf" firstAttribute="centerY" secondItem="f3F-T8-qhC" secondAttribute="centerY" id="uHf-f2-cKy"/>
+                            <constraint firstItem="zA6-sj-WRq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ufK-MN-EGg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fxA-Ab-S4V" secondAttribute="trailing" constant="16" id="xkf-Yw-hEz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityStateLabel" destination="AAC-Di-mrZ" id="WI0-32-SWE"/>
+                        <outlet property="collectionView" destination="Ayq-mq-0dK" id="ECG-vK-TgZ"/>
+                        <outlet property="currentAQIInstructionsLabel" destination="zA6-sj-WRq" id="V9N-E0-vd7"/>
+                        <outlet property="currentAQILabel" destination="B0G-AY-NGY" id="p7n-18-yIG"/>
+                        <outlet property="latTextField" destination="fxA-Ab-S4V" id="3JV-a0-VOo"/>
+                        <outlet property="latitudeText" destination="00j-C7-Fdm" id="ljp-Ti-kCg"/>
+                        <outlet property="longTextField" destination="fDl-jO-1zf" id="5pI-Pb-Sxt"/>
+                        <outlet property="longitudeText" destination="f3F-T8-qhC" id="wzv-Zf-uGF"/>
+                        <outlet property="resetButton" destination="gxl-X9-Ha7" id="hjZ-Is-lVm"/>
+                        <outlet property="segmentedControl" destination="70e-8G-gd3" id="P1x-Qv-WZ3"/>
+                        <outlet property="stationLabel" destination="e3j-ae-liM" id="9bF-cG-m7v"/>
+                        <outlet property="updateButton" destination="swX-ce-xHT" id="EEV-uA-nXs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundDailyAQI">
+            <color red="0.043137254901960784" green="0.23137254901960785" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

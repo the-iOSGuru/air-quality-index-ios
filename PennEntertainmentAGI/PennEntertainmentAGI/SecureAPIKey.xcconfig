@@ -1,0 +1,10 @@
+//
+//  SecureAPIKey.xcconfig
+//  PennEntertainmentAGI
+//
+//  Created by Buddy Rich on 7/11/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+AQI_TOKEN = 2db52b0fca8e210f725c089fabf15d1f2c10469c
